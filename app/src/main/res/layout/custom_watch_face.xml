@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:background="#FF00aa00"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_box_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1464"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_box_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8536"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_box_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1464"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_box_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8536"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_time_secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7518"/>
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/guide_box_right"
+        app:layout_constraintStart_toStartOf="@id/guide_box_left"
+        app:layout_constraintTop_toTopOf="@id/guide_box_top"
+        tools:text="12:34"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/guide_box_bottom"
+        app:layout_constraintEnd_toEndOf="@id/guide_box_right"
+        app:layout_constraintStart_toStartOf="@id/guide_box_left"
+        app:layout_constraintTop_toBottomOf="@id/time" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
